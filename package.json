@@ -2,18 +2,11 @@
   "name": "mern-social",
   "version": "1.0.0",
   "description": "A MERN stack based social media application",
-  "author": "Shama Hoque",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shamahoque/mern-social.git"
-  },
-  "homepage": "https://github.com/shamahoque/mern-social",
-  "main": "./dist/server.generated.js",
   "scripts": {
     "development": "env-cmd -f ./.env nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "node dist/server.generated.js"
+    "start": "node server.generated.js"
   },
   "devDependencies": {
     "babel-core": "6.26.2",
