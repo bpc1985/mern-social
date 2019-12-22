@@ -12,4 +12,4 @@ phases:
     build:
       - npm run build
       # Archive artifacts
-      - zip dist/deployed-mern-social.zip -r dist package.json package-lock.json
+      - zip dist/deployed-mern-social.zip -r dist package.json package-lock.json node_modules
