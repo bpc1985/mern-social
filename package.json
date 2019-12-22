@@ -6,7 +6,7 @@
   "scripts": {
     "development": "env-cmd -f ./.env nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "node server.generated.js"
+    "start": "node dist/server.generated.js"
   },
   "devDependencies": {
     "babel-core": "6.26.2",
