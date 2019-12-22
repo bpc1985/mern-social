@@ -13,8 +13,8 @@ phases:
       - npm run build
 
 artifacts:
-  type: zip
   files:
     - package.json
     - package-lock.json
     - 'dist/**/*'
+  base-directory: '.'
