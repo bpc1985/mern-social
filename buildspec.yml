@@ -6,6 +6,8 @@ phases:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
     pre_build:
+      - npm install -g npm@latest
       - npm install
+      - npm install core-util-is
     build:
       - npm run build
