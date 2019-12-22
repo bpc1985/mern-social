@@ -11,13 +11,13 @@ phases:
       # - npm install core-util-is
     build:
       - npm run build
-      - ls -la dist
 
 artifacts:
-  files:
-    - dist/**/*
-    - package.json
+  type: zip
+  paths:
+    - './dist/**/*'
+    - './package.json'
 
 cache:
   paths:
-    - node_modules/**/*
+    - './node_modules/**/*'
