@@ -11,12 +11,11 @@ phases:
       # - npm install core-util-is
     build:
       - npm run build
-      - ls -la dist
-      # - zip dist/deployed-mern-social.zip -r dist package.json package-lock.json node_modules
 
 artifacts:
   files:
-    - dist/**/*
-    - node_modules/**/*
+    - 'dist/**/*'
+    - 'node_modules/**/*'
     - package.json
-    - package-lock.json
+  discard-paths: yes
+  base-directory: '.'
