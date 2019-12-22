@@ -14,14 +14,12 @@ phases:
       - npm run build
   post_build:
     commands:
-      - cp package.json dist
-      - cp -a node_modules dist
+      - cp -a dist/* .
       - ls -la dist
 
 artifacts:
   files:
     - "**/*"
-  base-directory: "./dist"
 
 cache:
   paths:
