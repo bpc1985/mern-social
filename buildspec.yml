@@ -9,7 +9,6 @@ phases:
     commands:
       # - npm install -g npm@latest
       - npm install
-      # - npm install core-util-is
   build:
     commands:
       - npm run build
@@ -21,9 +20,9 @@ artifacts:
   files:
     - package.json
     - package-lock.json
-    - 'dist/**/*'
-    - 'node_modules/**/*'
+    - dist/**/*
+    - node_modules/**/*
 
 cache:
   paths:
-    - './node_modules/**/*'
+    - ./node_modules/**/*
