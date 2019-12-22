@@ -14,13 +14,15 @@ phases:
       - npm run build
   post_build:
     commands:
-      - cp -a dist/* .
       - ls -la dist
 
 artifacts:
   files:
-    - "**/*"
+    - package.json
+    - package-lock.json
+    - dist/**/*
+    - node_modules/**/*
 
 cache:
   paths:
-    - "./node_modules/**/*"
+    - ./node_modules/**/*
