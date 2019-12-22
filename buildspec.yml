@@ -11,7 +11,9 @@ phases:
       - npm install core-util-is
     build:
       - npm run build
+
 artifacts:
+  type: zip
   files:
     - package.json
     - package-lock.json
