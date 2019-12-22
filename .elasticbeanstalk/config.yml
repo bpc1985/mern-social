@@ -1,6 +1,5 @@
 branch-defaults:
   master:
     environment: MernSocial-env
-
-deploy:
-  artifact: dist/deployed-mern-social.zip
+#deploy:
+#  artifact: dist/deployed-mern-social.zip
