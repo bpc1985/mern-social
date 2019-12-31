@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # Upgrade AWS CLI to the latest version
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      # - npm install -g npm@latest
+      - npm install
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - ls -la dist
+
+# Artifacts will be output files to server (Beanstalk) after build step
+# In stage of deploy of pipeline, Input artifacts should be set BuildArtifact if deciding to use following configs
+# If choosing SourceArtifact, dont need to set artifacts, it will copy all source code to server
+artifacts:
+  files:
+    - package.json
+    - package-lock.json
+    - dist/**/*
+    - node_modules/**/*
+
+cache:
+  paths:
+    - ./node_modules/**/*
